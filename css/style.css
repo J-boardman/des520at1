@@ -14,3 +14,346 @@ body > *:not(:last-child) {
   height: 100vh;
   overflow-y: hidden;
 }
+
+/* SECTION ONE */
+
+/* Hero Section Background */
+header{
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Logo */
+header img {
+  background-color: white;
+  border: 5px solid #274c77;
+  border-radius: 1rem;
+  margin-top: 10px;
+  max-height: 17.5vh;
+  max-width: 90vw;
+}
+
+/* Push links away from logo */
+header > *:not(:first-child){
+  position: relative;
+  top: 55vh;
+}
+
+/* Links */
+nav a {
+  /* Positioning */
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: fit-content;
+
+  /* Styling */
+  background-color: #274c77;
+  border: 5px solid #274c77;
+  border-radius: 1rem;
+  color: white;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+/* Link content changes with media queries */
+nav a:first-child::after{
+  content: 'Specialists in optical solutions for children';
+}
+
+/* Link content changes with media queries */
+nav a:last-child::after{
+  content: 'Contact us today';
+}
+
+/* Hover effects for links */
+nav a:hover{
+  background-color: #6096ba;
+  color: white;
+}
+
+/* Click effects for links */
+nav a:focus{
+  background-color: #274c77;
+  color: white;
+}
+
+/* Styling for the click images within the links */
+nav a img {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 50px;
+}
+
+/* Link Text */
+body >  h2{
+  background-color: #274c77;
+  border-radius: 1rem;
+  color: white;
+  
+  font-size: 1.5rem;
+  font-weight: bolder;
+  
+  padding: 10px;
+  margin: 30px auto;
+}
+
+/* SECTION TWO */
+
+/* Keep text within area */
+main  *:not(:first-child){
+  font-size: 1.8rem;
+  max-width: 80vw;
+}
+
+main > article:not(:first-child){
+  display: inline-block;
+}
+
+main p {
+  padding: 30px;
+}
+
+details {
+  padding: 5px;
+  margin-top: 20px;
+  border: 5px solid #274c77;
+  border-radius: 1rem;
+  max-height: 150px;
+  transition: 1s;
+  overflow: hidden;
+}
+
+details[open] {
+  transition: 1s;
+  background-color: #a3cef166;
+  max-height:600px;
+}
+
+details:hover {
+  cursor: pointer; 
+  background-color: #a3cef166;
+}
+
+details summary {
+  list-style-type: '🖱️';
+  text-align: center;
+  position: relative;
+}
+
+
+ul {
+  list-style-type: '😎';
+  columns: 2;
+  cursor:auto;
+}
+
+li {
+  padding: 10px;
+}
+
+main > img {
+  width: 40vw;
+  margin: 20px;
+  border-radius: 1rem;
+}
+
+/* Main advertising section */
+main > article {
+  background-color: #274c77;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 10vh;
+  padding: 30px;
+  text-align: center;
+}
+
+main * {
+  text-align: left;
+}
+
+/* SECTION THREE */
+
+body > section {
+  background-image: url('../images/footer-bg.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  overflow-x: hidden;
+  
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Lighter background opacity for all sections except the footer */
+body > section > article{
+  background-color: #274c77bb;
+  height: 95vh;
+}
+
+/* Contact Logos */
+body > section > article > a > img:not(footer img) {
+  width: 64px;
+  padding-bottom: 5vh;
+  margin: 3vw;
+}
+
+/* Trading Hours */
+body > section p {
+  text-align: left;
+  max-width: 700px;
+  line-height: 2.2;
+  font-size: 1.5rem;
+}
+
+body > section :nth-child(9) {
+  padding-top: 30px;
+}
+
+/* Google Maps */
+body > section iframe {
+  height: 40%;
+  width: 700px;
+  border-radius: 1rem;
+  border: 5px solid #274c77;
+}
+
+/* Footer */
+footer {
+  background-color: #274c77;
+  height: 6vh;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer img { 
+  width: 32px;
+  position: relative;
+  top: 5px;
+}
+
+/* Back to top image */
+body > a > img {
+  opacity: 0%;
+  width: 80px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  overflow-y: hidden;
+  transition:500ms;
+}
+
+@media screen and (max-width:1100px){
+  nav a:first-child::after{
+    content: 'Optical solutions for children';
+  }
+
+  main *:not(:first-child){
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width:800px) {
+  body > section iframe, 
+  body > section p, nav a{
+    width: 90%;
+  }
+
+  iframe{
+    height: auto;
+  }
+
+  nav a:first-child::after{
+    content: 'Services';
+  }
+  nav a:last-child::after{
+    content: 'Contact';
+  }
+
+  main *:not(:first-child){
+    font-size: 1.2rem;
+  }
+
+  main > img {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media screen and (max-width:650px){
+  header, body > section{
+    background-attachment: scroll;
+  }
+  
+  main > :first-child {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    text-align: center;
+  }
+
+  li {
+    padding: 5px;
+  }
+  
+  body > section > article{
+    height: 90vh;
+  }
+
+  body > section > article > a > img:not(footer img) {
+    padding-bottom: 10px;
+  }
+
+  body > section > article > :first-child > :first-child{
+    margin-right: -5px;
+  }
+
+  footer {
+    height: 10vh;
+  }
+
+  main *:not(:first-child){
+    font-size: 1.2rem;
+    max-width: 90vw;
+  }
+}
+
+@media screen and (max-width:500px){
+  header > *:not(:first-child){
+    top: 42.5vh;
+  }
+
+  body > a > img {
+    width: 60px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  main *:not(:first-child){
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width:320px) {
+  nav a img {
+    display: none;
+  }
+
+  body > section :nth-child(3),
+  body > section :nth-child(4){
+    display: none;
+  }
+}
