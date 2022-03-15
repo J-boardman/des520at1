@@ -72,7 +72,7 @@ nav a img {
 }
 
 /* Link Text */
-body > :first-child h2{
+body >  h2{
   background-color: #274c77;
   border-radius: 1rem;
   color: white;

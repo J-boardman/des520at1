@@ -59,7 +59,7 @@ main > img {
 }
 
 /* Main advertising section */
-main > :first-child {
+main > article {
   background-color: #274c77;
   color: white;
   font-size: 2rem;
